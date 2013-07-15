@@ -101,35 +101,29 @@ body {
 	padding-top:2em;
 	padding-left:2em;
 }
+
+.deck {
+	width:400px;
+	height:300px;
+	background:darkred;
+	position:relative;
+	left:300px;
+}
+
 .card {
 	width:10em;
 	height:16em;
-	position: relative;
-	overflow: hidden;
+	position: absolute;
+	top:0;
+	left:0;
+
 	float:left;
-	margin:2em;
 	background-color:GhostWhite;
 	background-repeat:no-repeat;
 	background-position:center center;
-	-webkit-box-shadow:2px 5px 30px rgba( 0, 0, 0, 0.5 );
+/*	-webkit-box-shadow:2px 5px 30px rgba( 0, 0, 0, 0.5 );*/
 	border-radius:9px;
-}
-
-.card.flipped:before
-{
-	content: "";
-	position: absolute;
-	width: 200%;
-	height: 200%;
-	top: -50%;
-	left: -50%;
-	z-index: -1;
-	background: url( '../img/bgCardFlipped.png' ) 0 0 repeat #a06267;
-	-webkit-transform: rotate(12deg);
-	-moz-transform: rotate(12deg);
-	-ms-transform: rotate(12deg);
-	-o-transform: rotate(12deg);
-	transform: rotate(12deg);
+	border-bottom:1px solid #444;
 }
 
 .card p {
@@ -146,8 +140,7 @@ body {
 
 .card.flipped {
 	/*background-image:url( '../img/bgCardFlipped.png' );*/
-	background-image:none;
-	background-color:transparent;/*lightSlateGray;*/
+	background:url( '../img/bgCardFlipped.png' ) #a06267 repeat;
 	/*background: url( '../img/bgCardFlipped.png' ) 0 0 repeat;*/
 }
 
@@ -180,11 +173,17 @@ body {
 }
 
 
+/*********************
+TEMP
+*********************/
 
+#deckStartDeck {
+	background:darkblue;
+}
 
-
-
-
+#deckEggDeck {
+	background:pink;
+}
 
 /* ==========================================================================
    Helper classes

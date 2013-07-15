@@ -1,5 +1,5 @@
 /*
-Generates a deck of cards
+Generates a deck of cards. You can swap cards between the "main" deck and other decks (which can represent players, dealers etc)
 Sebastian Lenton 2013
 */
 
@@ -47,7 +47,7 @@ function Deck( name ) {
 			return length;
 		}
 	};
-	this.passCards = function( deck, amount ) {							//could merge passcard and passcards
+	this.passCards = function( deck, amount ) {							//this could be more efficient
 		if( !amount ) {
 			amount = 1;
 		}
@@ -56,7 +56,7 @@ function Deck( name ) {
 			deck.cards.push( cardToPass );
 		}
 	}
-	this.renderAll = function() {										//this should be deleted and inherited from Deck
+	this.renderAll = function() {										
 		var deckString = '';
 		for( var j = 0; j < this.cards.length; j++ ) {
 			deckString += this.cards[ j ].getCardString( j );
